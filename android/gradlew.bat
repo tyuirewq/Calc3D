@@ -42,14 +42,13 @@ set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
 if defined JAVA_HOME goto findJavaFromJavaHome
 
 set JAVA_EXE=java.exe
-%JAVA_EXE% -version >NUL 2>&1
+%JAVA_EXE% -version 2>&1 | findstr /C:"version \"17" >NUL
 if %ERRORLEVEL% equ 0 goto execute
 
 echo. 1>&2
-echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 1>&2
+echo ERROR: JAVA_HOME is not set or 'java' command in PATH is not Java 17. 1>&2
 echo. 1>&2
-echo Please set the JAVA_HOME variable in your environment to match the 1>&2
-echo location of your Java installation. 1>&2
+echo Please set the JAVA_HOME variable in your environment to the location of your Java 17 installation. 1>&2
 
 goto fail
 
