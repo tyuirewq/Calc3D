@@ -37,8 +37,8 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x android/gradlew
 
-      - name: Build Release APK
-        run: cd android && ./gradlew assembleRelease
+      - name: Build Debug APK
+        run: cd android && ./gradlew assembleDebug
 
       - name: Upload APK to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
@@ -46,12 +46,12 @@ jobs:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           groups: testers
-          file: android/app/build/outputs/apk/release/app-release-unsigned.apk
+          file: android/app/build/outputs/apk/debug/app-debug.apk
           releaseNotes: "Automated build from commit ${{ github.sha }}"
 
       - name: Upload APK as artifact (backup)
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
-          path: android/app/build/outputs/apk/release/app-release-unsigned.apk
+          name: app-debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30

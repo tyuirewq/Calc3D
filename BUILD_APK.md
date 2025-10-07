@@ -1,6 +1,6 @@
 # Building Your 3D Calculator APK
 
-Your React calculator app has been configured with Ionic Capacitor and is ready to be built as an Android APK! Follow the steps below to generate the APK file.
+Your React calculator app has been configured with Ionic Capacitor and is ready to be built as an Android APK!
 
 ## ✅ What's Already Done
 
@@ -8,6 +8,27 @@ Your React calculator app has been configured with Ionic Capacitor and is ready 
 - ✓ Android platform added
 - ✓ App built and synced
 - ✓ Project structure ready
+- ✓ **GitHub Actions workflows configured for cloud builds** ☁️
+
+---
+
+## 🌟 **RECOMMENDED: Build in the Cloud (No Android Studio Needed!)**
+
+**👉 See [CLOUD_BUILD_GUIDE.md](./CLOUD_BUILD_GUIDE.md) for complete cloud build instructions**
+
+### Quick Summary:
+1. Push your code to GitHub
+2. GitHub Actions automatically builds the APK
+3. Download the APK from the Actions tab
+4. **No Android Studio installation required!**
+
+**This is the easiest method and works on any computer!**
+
+---
+
+## 🖥️ Alternative: Build Locally with Android Studio
+
+If you prefer to build locally or need more control, follow these instructions:
 
 ## 📋 Prerequisites
 
